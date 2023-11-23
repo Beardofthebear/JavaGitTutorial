@@ -6,10 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal animal1 = new Animal(true, "Barsik", 18);
-        Animal animal2 = new Animal(false, "Mona", 9);
-        Animal animal3 = new Animal(false, "Plusha", 6);
-        Animal animal4 = new Animal(true, "Zaya", 5);
+        Animal animal1 = new Cat("Barsik", 18);
+        Animal animal2 = new Dog("Mona", 9);
+        Animal animal3 = new Dog("Plusha", 6);
+        Animal animal4 = new Cat("Zaya", 5);
 
         animals[0] = animal1;
         animals[1] = animal2;
@@ -17,10 +17,10 @@ public class Main {
         animals[3] = animal4;
 
         String answer = "";
-        Animal animalAnswer = GiveMePet("Zaya");
+        Animal animalAnswer = GiveMePet("Mona");
 
         if( animalAnswer!= null)
-            answer = animalAnswer.toString();
+            answer = animalAnswer.howItSound();
         else
             answer = "Я не нашел такое животное";
 

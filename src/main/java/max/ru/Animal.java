@@ -1,32 +1,21 @@
 package max.ru;
 
 public class Animal {
-    private boolean isCat = false;
     private String name = "";
     private int oldYears = 0;
     private boolean vactination = false;
     private String timeVactinatio = "";
 
-    public Animal(boolean isCat, String name, int oldYears) {
-        this.isCat = isCat;
+    public Animal(String name, int oldYears) {
         this.name = name;
         this.oldYears = oldYears;
     }
 
-    public Animal(boolean isCat, String name, int oldYears, boolean vactination, String timeVactinatio) {
-        this.isCat = isCat;
+    public Animal(String name, int oldYears, boolean vactination, String timeVactinatio) {
         this.name = name;
         this.oldYears = oldYears;
         this.vactination = vactination;
         this.timeVactinatio = timeVactinatio;
-    }
-
-    public boolean isCat() {
-        return isCat;
-    }
-
-    public void setCat(boolean cat) {
-        isCat = cat;
     }
 
     public String getName() {
@@ -64,12 +53,15 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "isCat=" + isCat +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", oldYears=" + oldYears +
                 ", vactination=" + vactination +
                 ", timeVactinatio='" + timeVactinatio + '\'' +
                 '}';
+    }
+
+    public String howItSound(){
+        return "silence";
     }
 }
 
