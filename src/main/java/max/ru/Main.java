@@ -1,7 +1,33 @@
 package max.ru;
 
- public class Main {
+    public class Main {
+        public static  void main(String[]args) {
+            Pet pet1= new Pet();
+            pet1.name ="Bob";
+            pet1.age = 1;
+            pet1.date = "1.12.22";
+            pet1.medicine = "yes";
+            pet1.giveMePet();
+            }
+        }
+class Pet {
+String name;
+int age;
+String date;
+String medicine;
+
+void giveMePet(){
+    System.out.println("Name: "+name+" years old: "+age+" date: "+date+" medicine result: "+medicine);
+
+}
+}
+
+ /*public class Main {
      public static void main(String[] args) {
+     }
+     }
+
+  /*
          String informationPets[] = new String[5];
          informationPets [0] = "Имя:Тайсон, Возраст:1 год Прививка:да Дата:3.08.2020г";
          informationPets [1] = "Имя:Барон, Возраст:1.5 года Прививка:нет Дата: ";
